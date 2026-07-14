@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login Page</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background-color: #ffe6ea; /* pale pink */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+    }
+
+    h1 {
+      color: darkgoldenrod;
+      font-weight: bold;
+      font-style: italic;
+      font-size: 2.5rem;
+      text-shadow: 2px 2px #fff;
+      margin-bottom: 20px;
+    }
+
+    .login-box {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      width: 320px;
+      text-align: center;
+    }
+
+    .login-box input[type="text"],
+    .login-box input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin: 12px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    .login-box label {
+      display: flex;
+      align-items: center;
+      font-size: 0.9rem;
+      margin-bottom: 15px;
+      justify-content: flex-start;
+    }
+
+    .login-box input[type="checkbox"] {
+      margin-right: 10px;
+    }
+
+    .login-box button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      background-color: darkgoldenrod;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .login-box button:hover {
+      background-color: goldenrod;
+    }
+
+    .login-box .links {
+      margin-top: 15px;
+    }
+
+    .login-box .links button {
+      background: none;
+      border: none;
+      color: #3b3b3b;
+      text-decoration: underline;
+      cursor: pointer;
+      margin: 5px;
+    }
+
+    .login-box .links button:hover {
+      color: darkgoldenrod;
+    }
+
+    .error-message {
+      color: red;
+      font-size: 0.9rem;
+      display: none;
+      margin-bottom: 10px;
+    }
+
+    .extra-buttons {
+      margin-top: 20px;
+    }
+
+    .extra-buttons button {
+      margin: 6px;
+      padding: 8px 20px;
+      border-radius: 10px;
+      border: none;
+      background-color: #fff;
+      color: darkgoldenrod;
+      border: 2px solid darkgoldenrod;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .extra-buttons button:hover {
+      background-color: darkgoldenrod;
+      color: white;
+    }
+
+  </style>
+</head>
+<body>
+
+  <h1>Welcome back, Champion!</h1>
+
+  <div class="login-box">
+    <div class="error-message" id="errorMsg">Invalid credentials. Try again!</div>
+
+    <input type="text" id="username" placeholder="Username" />
+    <input type="password" id="password" placeholder="Password" />
+
+    <label><input type="checkbox" id="rememberMe"> Remember Me</label>
+
+    <button onclick="login()">Login</button>
+
+    <div class="links">
+      <button onclick="redirectTo('signup.html')">Sign Up</button>
+      <button onclick="redirectTo('forgot.html')">Forgot Account?</button>
+    </div>
+  </div>
+
+  <div class="extra-buttons">
+    <button onclick="redirectTo('signup.html')">Go to Sign Up</button>
+    <button onclick="redirectTo('forgot.html')">Go to Forgot Account</button>
+    <button onclick="redirectTo('dashboard.html')">Go to Dashboard</button>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
